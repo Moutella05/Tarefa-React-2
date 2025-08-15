@@ -1,0 +1,118 @@
+.Main {
+  padding: 0 64px;
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 64px;
+  gap: 64px;
+}
+
+.Home {
+  text-decoration: none;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #090937;
+  width: fit-content;
+  cursor: pointer;
+  display: flex;
+  font-style: none;
+  text-decoration: none;
+}
+
+.Home:hover {
+  color: #ef6b4a;
+  transition: 0.3s;
+}
+
+.Cart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Cart_Item:hover {
+  background-color: #EF6B4A;
+  transition: 0.3s;
+}
+
+.Cart_Item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border: solid 1px #0909371A;
+}
+
+.Cart_Item img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.Cart_Item_Info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+.Cart_Item_Info h2 {
+  font-size: 26px;
+  color: #090937;
+
+}
+
+.Cart_Item_Info h3 {
+  font-size: 20px;
+  color: #09093799;
+}
+
+.Cart_Item_Info p {
+  font-size: 20px;
+  color: #6251DD;
+}
+
+.Remove_Button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.Trash {
+  width: 40px;
+  height: 40px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.Trash:hover {
+  background-color: #090937;
+  border-radius: 25%;
+}
+
+.Comprar {
+  width: 300px;
+  height: 70px;
+  border: none;
+  background-color: #EF6B4A;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.Comprar:hover {
+  scale: 1.05;
+  transition: 0.3s
+}

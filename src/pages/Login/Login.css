@@ -1,0 +1,121 @@
+.Divisoria {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.Image {
+  width: 50%;
+  height: 100%;
+}
+
+.Image img{
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.Form {
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  width: 50%;
+  height: 100vh;
+}
+
+.Form img {
+  width: 120px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
+  margin-top: 150px;
+}
+
+form h2 {
+  width: 192px;
+  height: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #09093799;
+}
+
+form h1 {
+  width: 240px;
+  height: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #090937;
+  margin-top: 10px;
+}
+
+form h4{
+  width: 95px;
+  height: 30px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #090937;
+  margin-top: 30px;
+}
+
+form input{
+  width: 380px;
+  height: 60px;
+  background-color: #F4F4FF;
+  color: #09093766;
+  border: none;
+  margin-bottom: 10px;
+  border: 1px solid #09093766;
+  border-radius: 4px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+#botao {
+  width: 400px;
+  height: 60px;
+  border: 1px solid #6251DD;
+  border-radius: 4px;
+  margin-top: 50px;
+  font-size: 1.5rem;
+  color: #6251DD;
+  font-style: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#botao a{
+  font-size: 1.5rem;
+  color: #6251DD;
+  font-style: none;
+  text-decoration: none;
+}
+
+#botao:hover {
+  background-color: #EF6B4A;
+  color: white;
+  border: none;
+}
+
+#botao a:hover {
+  background-color: #EF6B4A;
+  color: white;
+  border: none
+}
+
+span {
+  margin-left: 10px;
+  color: #09093799;
+  font-weight: 700;
+}
