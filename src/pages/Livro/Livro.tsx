@@ -1,22 +1,21 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { type Livro } from "../../Type/Livro";
 import './Livro.css'
 import { Link } from "react-router-dom";
+import useGetLivro from "../../hooks/useGetLivro";
 import useCartStore from "../../stores/CartStore";
 
 
 export default function Produto() {
+  const livrosHook = useGetLivro();
   const [livros, setLivros] = useState<Livro | null>(null);
   const addToCart = useCartStore((state) => state.addItem);
 
   useEffect(() => {
     const id = window.location.pathname.split("/").pop();
-    axios
-      .get(`http://localhost:3000/livros/${id}`)
-      .then((response) => setLivros(response.data))
-      .catch((error) => console.error("Erro ao buscar livros:", error));
-  }, []); 
+    const livroEncontrado = livrosHook.find((l) => String(l.id) === id);
+    setLivros(livroEncontrado || null);
+  }, [livrosHook]);
   return(
     <>
     <div className='Produto'>

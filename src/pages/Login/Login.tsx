@@ -52,7 +52,7 @@ export default function Login() {
             onFocus={() => setEmailFocus(true)}
             onBlur={() => setEmailFocus(false)}
           />
-          {errors.email && <span>{errors.email.message}</span>}
+          {errors.email && <span className='Warning'>{errors.email.message}</span>}
           <h4>Senha</h4>
           <input
             type="password"
@@ -66,7 +66,7 @@ export default function Login() {
             onFocus={() => setSenhaFocus(true)}
             onBlur={() => setSenhaFocus(false)}
           />
-          {errors.password && <span>{errors.password.message}</span>}
+          {errors.password && <span className='Warning'>{errors.password.message}</span>}
           <button disabled={isSubmitting} id="botao" type="submit">{isSubmitting ? "Carregando..." : "Entrar"}</button>
           <button disabled={isSubmitting} id="botao">{isSubmitting ? "Carregando..." : "Cadastre-se"}</button>
         </form>

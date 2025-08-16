@@ -5,21 +5,18 @@ import { Link } from "react-router-dom";
 import Card_Categoria from "../../Components/Card_Categoria/Card_Categoria";
 import Search from "../../assets/Search.svg";
 import "./Promo_Page.css";
+import useGetLivro from "../../hooks/useGetLivro";
 
 export default function Promo_Page() {
+  const livrosHook = useGetLivro();
   const [livros, setLivros] = useState<Livro[]>([]);
   const [livrosOriginais, setLivrosOriginais] = useState<Livro[]>([]);
   const autor = decodeURIComponent(window.location.pathname.split("/").pop() || "");
 
   useEffect(() => {
-    axios
-      .get("http://localhost:3000/livros")
-      .then((response) => {
-        setLivros(response.data);
-        setLivrosOriginais(response.data);
-      })
-      .catch((error) => console.error("Erro ao buscar livros:", error));
-  }, []);
+    setLivros(livrosHook);
+    setLivrosOriginais(livrosHook);
+  }, [livrosHook]);
 
   const [pesquisaFocus, setPesquisaFocus] = useState(false);
 

@@ -114,7 +114,7 @@ form input:focus {
   border: none
 }
 
-span {
+.Warning {
   margin-left: 10px;
   color: #09093799;
   font-weight: 700;

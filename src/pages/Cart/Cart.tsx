@@ -13,8 +13,8 @@ export default function Cart() {
         {cart.length === 0 ? (
           <p>Seu carrinho está vazio.</p>
         ) : (
-          cart.map((item) => (
-            <>
+          <>
+            {cart.map((item) => (
               <div key={item.id} className="Cart_Item">
                 <img src={item.capa} alt={item.titulo} />
                 <div className="Cart_Item_Info">
@@ -26,11 +26,9 @@ export default function Cart() {
                   </button>
                 </div>
               </div>
-              <div>
-                <button className='Comprar'>Comprar</button>
-              </div>
-            </>
-          ))
+            ))}
+            <button className='Comprar'>Comprar</button>
+          </>
         )}
       </div>
     </div>
